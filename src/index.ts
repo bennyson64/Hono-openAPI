@@ -120,9 +120,9 @@ const baseUrl =
 app.get(
   '/scalar',
   apiReference({
-    spec: {
+    
       url: 'http://localhost:3000/openapi',
-    },
+    
   })
 )
 
