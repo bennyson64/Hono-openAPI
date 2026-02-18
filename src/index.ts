@@ -115,20 +115,15 @@ app.get(
 // for scalar
 const baseUrl =
   process.env.NODE_ENV === 'production'
-    ? 'https://your-api-domain.com'
+    ? 'https://hono-open-api-backend.vercel.app/'
     : 'http://localhost:3000'
+
 app.get(
   '/scalar',
   apiReference({
-    
-      url: 'http://localhost:3000/openapi',
-    
+    url: `${baseUrl}/openapi`,
   })
 )
-
-/* -------------------- */
-/* Server */
-/* -------------------- */
 
 serve({
   fetch: app.fetch,
